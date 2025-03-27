@@ -16,9 +16,9 @@ class OpenDataFix:
         self.substitution = os.getenv('SUBSTITUTION')
         self.source_file_path = source_file_path
         self.result_file_path = result_file_path
-        self._get_rows_list()
 
     def fix_data(self):
+        self._get_rows_list()
         self._fix_names()
         self._fix_phones()
         self._fix_repeatings()
