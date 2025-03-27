@@ -25,7 +25,7 @@ class OpenDataFix:
         self._write_fixed_data()
 
     def show_data(self):
-        if self.fix_data:
+        if self.fixed_data:
             pprint(self.fixed_data)
 
     def _get_rows_list(self):
