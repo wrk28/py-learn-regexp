@@ -24,8 +24,9 @@ class OpenDataFix:
         self._fix_repeatings()
         self._write_fixed_data()
 
-    def show_list(self):
-        pprint(self.rows_list)
+    def show_data(self):
+        if self.fix_data:
+            pprint(self.fixed_data)
 
     def _get_rows_list(self):
         with open(self.source_file_path, encoding="utf-8") as f:
@@ -79,4 +80,5 @@ class OpenDataFix:
 if __name__ == '__main__':
     open_data_fix = OpenDataFix('phonebook_raw.csv', 'phonebook.csv')
     open_data_fix.fix_data()
-    open_data_fix.show_list()
+    open_data_fix.show_data()
+    
